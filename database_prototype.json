@@ -1,0 +1,117 @@
+{
+    "tables": [
+        {
+            "name": "PME",
+            "position": {
+                "x": 100,
+                "y": 100
+            },
+            "size": {
+                "width": 200,
+                "height": 200
+            },
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "integer",
+                    "position": {
+                        "x": 10,
+                        "y": 30
+                    }
+                },
+                {
+                    "name": "name",
+                    "type": "text",
+                    "position": {
+                        "x": 10,
+                        "y": 70
+                    }
+                },
+                {
+                    "name": "location",
+                    "type": "text",
+                    "position": {
+                        "x": 10,
+                        "y": 110
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Impact",
+            "position": {
+                "x": 400,
+                "y": 100
+            },
+            "size": {
+                "width": 200,
+                "height": 150
+            },
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "integer",
+                    "position": {
+                        "x": 10,
+                        "y": 30
+                    }
+                },
+                {
+                    "name": "pme_id",
+                    "type": "integer",
+                    "position": {
+                        "x": 10,
+                        "y": 70
+                    }
+                },
+                {
+                    "name": "impact_score",
+                    "type": "integer",
+                    "position": {
+                        "x": 10,
+                        "y": 110
+                    }
+                }
+            ]
+        }
+    ],
+    "relations": [
+        {
+            "from": {
+                "table": "PME",
+                "column": "id"
+            },
+            "to": {
+                "table": "Impact",
+                "column": "pme_id"
+            },
+            "type": "one-to-many",
+            "color": "#2196F3"
+        }
+    ],
+    "styles": {
+        "table": {
+            "fill": "#4CAF50",
+            "stroke": "#388E3C",
+            "strokeWidth": 2,
+            "text": {
+                "fontSize": 16,
+                "color": "#FFFFFF"
+            }
+        },
+        "column": {
+            "fill": "#81C784",
+            "stroke": "#388E3C",
+            "strokeWidth": 1,
+            "text": {
+                "fontSize": 14,
+                "color": "#000000"
+            }
+        },
+        "relation": {
+            "stroke": "#2196F3",
+            "strokeWidth": 2,
+            "arrowhead": "triangle"
+        }
+    }
+}
